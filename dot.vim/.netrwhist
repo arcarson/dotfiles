@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/andycarson/client/intrascope/space_v2_mockup'
+let g:netrw_dirhist_2='/Users/andycarson/client/rmit/urnav/urnav_static_mockup'
+let g:netrw_dirhist_3='/Users/andycarson/client/intrascope/space_v2_mockup'
+let g:netrw_dirhist_4='/Users/andycarson/client/rmit/urnav/urnav_static_mockup'
+let g:netrw_dirhist_5='/Users/andycarson/client/silverpond/silverpond_website_jekyll/2013_middleman'
+let g:netrw_dirhist_6='/Users/andycarson/client/intrascope/space_v2_mockup'

@@ -1,0 +1,30 @@
+snippet comment
+	/* --------------------------------------------------------------------------
+	   ${1}
+	   -------------------------------------------------------------------------- */
+snippet .
+	.${1} {
+		${2}
+	}
+
+snippet #
+	#${1} {
+		${2}
+	}
+
+snippet ext
+	@extend %${1};
+snippet inc
+	@include @${1};
+snippet bps
+	@include breakpoint(small) {
+		${1}
+	}
+snippet bpm
+	@include breakpoint(medium) {
+		${1}
+	}
+snippet bpl
+	@include breakpoint(large) {
+		${1}
+	}

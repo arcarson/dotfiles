@@ -1,0 +1,11 @@
+[user]
+	name = Andy Carson
+	email = andrew.carson@silverpond.com.au
+[colour]
+	ui = true
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+[push]
+	default = simple

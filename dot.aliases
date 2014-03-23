@@ -1,0 +1,9 @@
+# git alias
+alias gs="git status"
+alias gm="git commit -m"
+alias ga="git add"
+
+# python server
+alias python_server='python -m SimpleHTTPServer'
+
+
