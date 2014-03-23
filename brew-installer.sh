@@ -9,6 +9,8 @@ brew upgrade
 echo "installing brew formulae..."
 brew install apple-gcc42
 brew install git
+brew install imagemagic
+brew install mysql
 brew install tig
 brew install vim
 
