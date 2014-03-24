@@ -8,6 +8,7 @@ brew upgrade
 
 echo "installing brew formulae..."
 brew install apple-gcc42
+brew install fontforge ttfautohint
 brew install git
 brew install imagemagic
 brew install mysql
