@@ -11,6 +11,7 @@ brew install apple-gcc42
 brew install bash-completion
 brew install fontforge ttfautohint
 brew install git
+brew install heroku-toolbelt
 brew install imagemagic
 brew install mysql
 brew install tig
@@ -28,4 +29,5 @@ brew cask install iterm2
 brew cask install keyremap4macbook
 brew cask install macvim
 brew cask install pckeyboardhack
+brew cask install skype
 brew cask install slate
