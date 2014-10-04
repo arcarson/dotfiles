@@ -23,7 +23,6 @@ brew install brew-cask
 
 echo "installing casks..."
 brew cask install alfred
-brew cask install evernote
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install keyremap4macbook
