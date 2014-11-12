@@ -7,19 +7,19 @@ echo "upgrading current formulae..."
 brew upgrade
 
 echo "installing brew formulae..."
-brew install apple-gcc42
+#brew install apple-gcc42
 brew install bash-completion
 brew install fontforge ttfautohint
 brew install git
 brew install heroku-toolbelt
-brew install imagemagic
-brew install mysql
+brew install imagemagick
+#brew install mysql
 brew install tig
 brew install vim
 
-echo "setting up brew-cask..."
-brew tap phinze/cask
-brew install brew-cask
+#echo "setting up brew-cask..."
+#brew tap phinze/cask
+#brew install brew-cask
 
 echo "installing casks..."
 brew cask install alfred

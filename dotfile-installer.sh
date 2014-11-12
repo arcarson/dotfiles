@@ -2,14 +2,13 @@
 
 echo "Installing dotfiles..."
 
-cp -vr dot.vim ~/.vim
-
-cp -v dot.aliases ~/.aliases
-cp -v dot.bash_profile ~/.bash_profile
-cp -v dot.cdpath ~/.cdpath
-cp -v dot.gitconfig ~/.gitconfig
-cp -v dot.gitignore ~/.gitignore
-cp -v dot.path ~/.path
-cp -v dot.slate ~/.slate
-cp -v dot.vimrc ~/.vimrc
+ln -sv ~/tools/dotfiles/.aliases ~/.aliases
+ln -sv ~/tools/dotfiles/.bash_profile ~/.bash_profile
+ln -sv ~/tools/dotfiles/.cdpath ~/.cdpath
+ln -sv ~/tools/dotfiles/.gitconfig ~/.gitconfig
+ln -sv ~/tools/dotfiles/.gitignore ~/.gitignore
+ln -sv ~/tools/dotfiles/.path ~/.path
+ln -sv ~/tools/dotfiles/.slate ~/.slate
+ln -sv ~/tools/dotfiles/.vim ~/.vim
+ln -sv ~/tools/dotfiles/.vimrc ~/.vimrc
 
