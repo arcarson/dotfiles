@@ -69,6 +69,9 @@ set number
 " Display non-visible chars
 set list
 
+" associate *.slim with haml filetype because slim syntax highlighing sucks
+au BufRead,BufNewFile *.slim setfiletype haml
+
 " ---------------------------------------
 " Config - key mapping
 " ---------------------------------------
