@@ -91,9 +91,11 @@ bind e:cmd hint ASDFJKLQWERUIOP
 alias hyper ctrl;shift;alt;cmd
 
 # Location bindings
-bind h:${hyper} ${lefthalf}
-bind k:${hyper} ${full}
-bind l:${hyper} ${righthalf}
+bind h:${hyper}  ${lefthalf}
+bind g:${hyper}  ${leftless}
+bind k:${hyper}  ${full}
+bind l:${hyper}  ${righthalf}
+bind ;:${hyper}  ${rightless}
 # bind r:${hyper} throw next
 
 # Resize Bindings
