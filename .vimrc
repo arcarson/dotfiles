@@ -88,14 +88,13 @@ map! <C-b> {}<left><CR><CR><up><tab>
 " Remap Nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
 
-" Clear search
-map <,><space> :noh<cr>
-
 " Remove trailing white spaces
 map <F5> :%s/\s\+$//<cr><leader><space>
 
+" Set file type to text
+map <F2> :set ft=txt<cr>
 
-" Snipmate
+" Snipmate trigger
 imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
 smap <C-j> <Plug>snipMateNextOrTrigger
 
