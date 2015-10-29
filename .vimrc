@@ -56,8 +56,11 @@ set nowrap
 " Config - display
 " ---------------------------------------
 
+"gui font
+set guifont=Monaco:h12
+
 " Colour scheme
-color molokai
+color oceandeep
 
 " Change cursor shape in insert mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
