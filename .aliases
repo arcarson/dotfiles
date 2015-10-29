@@ -3,8 +3,11 @@ alias gs="git status"
 alias gm="git commit -m"
 alias ga="git add"
 alias delete-merged-branches="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+alias gss="git stash save"
+alias gsl="git stash list"
+alias gsa="f() { git stash apply stash^{/$*}; }; f"
+alias gsshow="f() { git stash show stash^{/$*} -p; }; f"
+
 
 # python server
 alias python_server='python -m SimpleHTTPServer'
-
-
