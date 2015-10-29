@@ -28,9 +28,6 @@ set noswapfile
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" try and make terminal vim more responsive
-set lazyredraw
-set ttyfast
 " ---------------------------------------
 " Config - formatting
 " ---------------------------------------
