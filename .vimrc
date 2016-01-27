@@ -101,21 +101,3 @@ map <F4> :execute " Ggrep " . expand("<cword>") . " " <bar> cwindow<CR>
 " Restart clojure repl (Sperero)
 nmap <SPACE> :Eval (user/restart)<CR><CR>
 
-" Format css rule set for coffescript
-"map <F3> :s/-\(\w\)/\U\1/<CR>gv:s/px//<CR>gv:s/;//<CR>gv:s/\(\d\+%\)/"\1"/<CR>gv:s/:\s\(\w.*\)/: "\1"<CR>
-
-command! Prose inoremap <buffer> . .<C-G>u|
-            \ inoremap <buffer> ! !<C-G>u|
-            \ inoremap <buffer> ? ?<C-G>u|
-            \ setlocal nolist nowrap tw=74 fo=t1 nonu|
-            \ augroup PROSE|
-            \   autocmd InsertEnter <buffer> set fo+=a|
-            \   autocmd InsertLeave <buffer> set fo-=a|
-            \ augroup END
-
-command! Code silent! iunmap <buffer> .|
-            \ silent! iunmap <buffer> !|
-            \ silent! iunmap <buffer> ?|
-            \ setlocal nospell list nowrap
-            \     tw=74 fo=cqr1 showbreak=… nu|
-            \ silent! autocmd! PROSE * <buffer>
