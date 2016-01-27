@@ -8,7 +8,7 @@ ln -sv ~/tools/dotfiles/.cdpath ~/.cdpath
 ln -sv ~/tools/dotfiles/.gitconfig ~/.gitconfig
 ln -sv ~/tools/dotfiles/.gitignore ~/.gitignore
 ln -sv ~/tools/dotfiles/.path ~/.path
-ln -sv ~/tools/dotfiles/.slate ~/.slate
+ln -sv ~/tools/dotfiles/.hammerspoon ~/.hammerspoon
 ln -sv ~/tools/dotfiles/.vim ~/.vim
 ln -sv ~/tools/dotfiles/.vimrc ~/.vimrc
 

@@ -23,7 +23,7 @@ echo "installing casks..."
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install macvim
-brew cask install slate
+brew cask install hammerspoon
 brew cask install seil
 brew cask install karabiner
 brew cask install vlc
