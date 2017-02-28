@@ -1,0 +1,107 @@
+snippet log
+console.log($1)
+endsnippet
+snippet func
+const $1 = ($2) => {
+	$3
+}
+endsnippet
+
+snippet for
+for (var i = $1; i < $2; i++) {
+	$3
+}
+endsnippet
+
+snippet s
+const $1 = styled.${2:div}\`
+	$3
+\`
+endsnippet
+
+snippet ic
+import $1 from '../components/$1'
+endsnippet
+
+snippet ii
+import $1Icon from 'icons/$2.inline.svg'
+endsnippet
+
+snippet t
+<$1>
+	$2
+</$1>
+endsnippet
+
+snippet st
+<$1
+	style={ styles.$2 }
+>
+	$3
+</$1>
+endsnippet
+
+snippet fcomp
+// Imports - config
+import React from 'react'
+import styled from 'styled-components'
+import { palette, typeStyles } from '../utils/settings'
+
+
+// Component
+const $1 = ({ $2 }) => {
+	return (
+		$3
+	)
+}
+
+
+$1.propTypes = {
+}
+
+
+export default $1
+endsnippet
+
+snippet scomp
+// Imports - config
+import React from 'react'
+import styled from 'styled-components'
+import { palette, typeStyles } from '../utils/settings'
+
+
+// Component
+const $1 = styled.${2:div}\`
+	$3
+\`
+
+
+export default $1
+endsnippet
+
+snippet bcomp
+// Imports - config
+import React from 'react'
+
+// Imports - styles
+import '../css/$3'
+
+
+// Component
+const $1 = ({ $2 }) => {
+	return (
+		$4
+	)
+}
+
+
+$1.propTypes = {
+}
+
+
+export default $1
+endsnippet
+
+snippet pt
+$1: React.PropTypes.$2
+endsnippet

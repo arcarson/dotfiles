@@ -1,0 +1,14 @@
+snippet sf
+(defn $1 [& body]
+	[:${2:div} {:style
+				{$3}} body])
+endsnippet
+
+snippet st
+[:$1 {:styles
+			{$2} $3}]
+endsnippet
+
+snippet t
+[:$1]
+endsnippet
