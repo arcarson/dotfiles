@@ -15,6 +15,8 @@ brew install imagemagick
 brew install postgresql
 brew install tig
 brew install vim
+brew install node
+brew install ruby-build
 
 echo "setting up brew-cask..."
 brew install caskroom/cask/brew-cask
