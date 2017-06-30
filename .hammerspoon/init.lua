@@ -1,26 +1,27 @@
 -- Config
 
+k = hs.hotkey.modal.new({}, "F17")
 hs.window.animationDuration = 0
-local mash = {"cmd", "alt", "ctrl", "shift"}
 
 
 -- Window positioning
 
-hs.hotkey.bind(mash, "1", function()
-  local win    = hs.window.focusedWindow()
-  local f      = win:frame()
-  local screen = win:screen()
-  local max    = screen:frame()
+windowThird = function()
+  win    = hs.window.focusedWindow()
+  f      = win:frame()
+  screen = win:screen()
+  max    = screen:frame()
 
   f.x = max.x
   f.y = max.y
   f.w = max.w * .33333
   f.h = max.h
   win:setFrame(f)
-end)
+end
+k:bind('', '1', nil, windowThird)
 
 
-hs.hotkey.bind(mash, "2", function()
+windowTwoThird = function()
   local win    = hs.window.focusedWindow()
   local f      = win:frame()
   local screen = win:screen()
@@ -31,10 +32,11 @@ hs.hotkey.bind(mash, "2", function()
   f.w = max.w * .66666
   f.h = max.h
   win:setFrame(f)
-end)
+end
+k:bind('', '2', nil, windowTwoThird)
 
 
-hs.hotkey.bind(mash, "h", function()
+windowLeft = function()
   local win    = hs.window.focusedWindow()
   local f      = win:frame()
   local screen = win:screen()
@@ -45,10 +47,11 @@ hs.hotkey.bind(mash, "h", function()
   f.w = max.w / 2
   f.h = max.h
   win:setFrame(f)
-end)
+end
+k:bind('', 'h', nil, windowLeft)
 
 
-hs.hotkey.bind(mash, "l", function()
+windowRight = function()
   local win    = hs.window.focusedWindow()
   local f      = win:frame()
   local screen = win:screen()
@@ -59,10 +62,11 @@ hs.hotkey.bind(mash, "l", function()
   f.w = max.w / 2
   f.h = max.h
   win:setFrame(f)
-end)
+end
+k:bind('', 'l', nil, windowRight)
 
 
-hs.hotkey.bind(mash, "k", function()
+windowFull = function()
   local win    = hs.window.focusedWindow()
   local f      = win:frame()
   local screen = win:screen()
@@ -73,23 +77,51 @@ hs.hotkey.bind(mash, "k", function()
   f.w = max.w
   f.h = max.h
   win:setFrame(f)
-end)
+end
+k:bind('', 'k', nil, windowFull)
 
 
--- Launch or focus applications
+-- -- Launch or focus applications
 
-hs.hotkey.bind(mash, "i", function()
+launchTerminal = function()
   hs.application.launchOrFocus("iTerm")
-end)
+  k.triggered = true
+end
+k:bind('', 'i', nil, launchTerminal)
 
 
-hs.hotkey.bind(mash, "r", function()
-  hs.application.launchOrFocus("Google Chrome")
-end)
-
-
-hs.hotkey.bind(mash, "e", function()
+launchEditor = function()
   hs.application.launchOrFocus("Macvim")
-end)
+  k.triggered = true
+end
+k:bind('', 'e', nil, launchEditor)
 
 
+launchBrowser = function()
+  hs.application.launchOrFocus("Google Chrome")
+  k.triggered = true
+end
+k:bind('', 'r', nil, launchBrowser)
+
+
+-- Enter Hyper Mode when F18 (Hyper/Capslock) is pressed
+
+pressedF18 = function()
+  k.triggered = false
+  k:enter()
+end
+
+-- Leave Hyper Mode when F18 (Hyper/Capslock) is pressed,
+--   send ESCAPE if no other keys are pressed.
+
+releasedF18 = function()
+  k:exit()
+  if not k.triggered then
+    hs.eventtap.keyStroke({}, 'ESCAPE')
+  end
+end
+
+
+-- Bind the Hyper key
+
+f18 = hs.hotkey.bind({}, 'F18', pressedF18, releasedF18)

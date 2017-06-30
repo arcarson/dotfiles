@@ -11,4 +11,4 @@ ln -sv ~/tools/dotfiles/.path ~/.path
 ln -sv ~/tools/dotfiles/.hammerspoon ~/.hammerspoon
 ln -sv ~/tools/dotfiles/.vim ~/.vim
 ln -sv ~/tools/dotfiles/.vimrc ~/.vimrc
-
+ln -sv ~/tools/dotfiles/karabiner ~/.config/
