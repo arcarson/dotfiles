@@ -31,15 +31,11 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-Plug 'scrooloose/syntastic', { 'do': 'npm install -g eslint babel-eslint eslint-plugin-react' }
-
-Plug 'mtscout6/syntastic-local-eslint.vim'
-
 Plug 'lambdatoast/elm.vim'
 
 Plug 'junegunn/vim-easy-align'
 
-Plug 'flowtype/vim-flow'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
@@ -82,9 +78,6 @@ set shiftwidth=2
 " Spaces for tabs and 2 spaces for tab
 set expandtab
 set tabstop=2
-
-" Don't wrap lines
-"set nowrap
 
 " html indenting on .js files also
 let g:jsx_ext_required = 0
@@ -131,10 +124,6 @@ map <F5> :%s/\s\+$//<cr><leader><space>
 " Set file type to text
 map <F2> :set ft=txt<cr>
 
-" Snipmate trigger
-"imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
-"smap <C-j> <Plug>snipMateNextOrTrigger
-
 " Global search word under cursor
 map <F4> :execute " Ggrep " . expand("<cword>") . " " <bar> cwindow<CR>
 
@@ -174,22 +163,6 @@ let g:mta_filetypes = {
     \ 'javascript.jsx' : 1,
     \}
 
-" ---------------------------------------
-" Config - syntastic
-" ---------------------------------------
-
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 
 " ---------------------------------------
 " Config - vim-easy-align
@@ -207,3 +180,14 @@ nmap ga <Plug>(EasyAlign)
 " ---------------------------------------
 
 let g:AutoPairsShortcutFastWrap = '<C-l>'
+
+
+" ---------------------------------------
+" Config - prettier
+" ---------------------------------------
+
+" User Prettier to power the gq command
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --trailing-comma\ all
+
+" Reformat on save
+autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
